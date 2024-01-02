@@ -1,4 +1,4 @@
-$csvPath = "C:\Users\KhoaHoang\Downloads\VSCode\Powershell-Project\AddPrinter\printers.csv"
+$csvPath = ".\printers.csv"
 
 
 function Install-Printers {
