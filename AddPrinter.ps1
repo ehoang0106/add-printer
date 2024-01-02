@@ -16,9 +16,9 @@ function Install-Printers {
         # Rename printer name, the orignal printer name will be the name setup on the printer, we need to update it
         Rename-Printer -Name $printer.Name -NewName $row.PrinterName
         # Set Port and Driver for the printer
-        $printer = Get-Printer -Name $row.PrinterName
+        $RenamedPrinter = Get-Printer -Name $row.PrinterName
 
-        Set-Printer -Name $printer.Name -PortName $row.IPAddress -DriverName $row.PrinterDriverName
+        Set-Printer -Name $RenamedPrinter.Name -PortName $row.IPAddress -DriverName $row.PrinterDriverName
         
 
     }
